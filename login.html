@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>login</title>
+</head>
+
+<body>
+
+    <header class="page-header" id="page-header">
+    </header>
+
+
+    <section class="form-wrap">
+        <form class="form" method="POST" action="" id="login-form">
+            <h2 class="form-title">Log In</h2>
+
+            <div class="inputs-list">
+
+                
+                <div class="input-container" data-error="username Already Taken">
+                    <label class="input-label" for="username">Username</label>
+                    <input id="username"
+                    title="need to be atleats 6 caracters long, cant be empty, (a-z, 0-9, _.)" 
+                    name="username"
+                    type="text" 
+                    class="input" 
+                    placeholder="Last Name" 
+                    required pattern="[A-za-z0-9_.]{6,}">
+                </div>
+                
+                <div class="input-container" data-error="not valid password">
+                    <label class="input-label" for="password">Password</label>
+                    <input id="password"
+                    title="tiene que tener almenos 6 caracteres, (sin espacion es blanco)." 
+                    name="password" 
+                    type="password" 
+                    class="input password-input" 
+                    placeholder="Password" 
+                    required  pattern="[\S+]{5,30}">
+                </div>
+            </div>
+                
+            <div class="btn-wrap">
+                <input id="send-btn" class="btn" type="submit"  name="send" value="Log in">
+            </div>
+            
+            <div class="form-link-cont">
+                <a class="form-link" href="register.html"> <small>or...</small>Create a new User!</a>
+            </div>
+            
+            <div class="message-cont">
+                <p class="message-space" id="login-message"></p>
+            </div>
+            
+        </form>
+        
+    </section>
+    <script src="js/login.js"></script>
+    <script src="js/header.js"></script>
+</body>
+</html>

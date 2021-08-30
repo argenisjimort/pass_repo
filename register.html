@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>User Register</title>
+</head>
+
+
+
+<body>
+
+    <header class="page-header" id="page-header">
+    </header>
+
+    <section id="register" class="form-wrap">
+        <form class="form" method="GET" value="submit" action="" id="register-form">
+                <h2 class="form-title">User Register</h2>
+
+            <div class="inputs-list">
+                <!--username-->
+                <div class="input-container" data-error="username Already Taken">
+                    <label class="input-label" for="username">Username</label>
+                    <input id="username"
+                        autocomplete="off"
+                        title="cant be empty, cant use blankspaces, need to be atleats 6 caracters long" 
+                        name="username"
+                        type="text" 
+                        class="input" 
+                        placeholder="Last Name" 
+                        required pattern="[A-Za-z0-9_.]{6,}">
+                </div>
+
+                <!--Email
+                    <div class="input-container" data-error="not valid email">
+                        <label class="input-label" for="lastName">Email</label>
+                        <input id="email" 
+                        title="enter a valid email" 
+                        name="email" 
+                        type="text" 
+                        class="input email-input" 
+                        placeholder="Last Name"
+                        required pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    </div>
+                -->
+              
+                <!--password-->
+                <div class="input-container" data-error="not valid password">
+                    <label class="input-label" for="password">Password</label>
+                    <input id="password"
+                        autocomplete="off"
+                        title="tiene que tener almenos 6 caracteres, (sin espacion es blanco)." 
+                        name="password" 
+                        type="password" 
+                        class="input password-input" 
+                        placeholder="Password" 
+                        required  pattern="[\S+]{5,30}">
+                </div>
+
+                <!--password confirmation-->
+                <div class="input-container" data-error="claves no son iguales">
+                    <label class="input-label" for="passwordConfirmation">Confirm Password</label>
+                    <input id="passwordConfirmation"
+                        autocomplete="off"
+                        title="tiene que tener almenos 6 caracteres, (sin espacion es blanco). y tiene que concordar con la clave" 
+                        name="passwordConfirmation" 
+                        type="password" 
+                        class="input  passwordConfirm-input" 
+                        placeholder="Confirm Password" 
+                        required  pattern="[\S+]{5,30}">
+                </div>
+            </div>
+            
+            <div class="btn-wrap">
+                <input id="register-submit-btn" type="submit" class="btn" name="send" value="Register">
+            </div>
+            
+            <div class="form-link-cont">
+                <a class="form-link" href="login.html">Login Instead</a>
+            </div>
+
+            <div class="message-cont">
+                <p class="message-space" id="register-message"></p>
+            </div>
+
+        </form>
+        
+    </section>
+
+
+    <script src="js/header.js"></script>
+    <script src="js/register.js"></script>
+    <!--
+        <body onload="clearAllInputs()">
+            -->
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+/*styles CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Gill Sans', sans-serif;
+}
+
+.btn {
+    padding: 6px 20px;
+    border-radius: 5px;
+    border: 2px solid rgb(17, 116, 196);
+    font-size: .8em;
+    background: rgb(17, 116, 196);
+
+    color: honeydew;
+
+    font-weight: 600;
+    
+    transition-duration: 400ms;
+}
+
+.btn:hover, .btn:focus {
+    background: honeydew;
+    color: rgb(17, 116, 196);
+    outline: none;
+}
+
+.btn:disabled {
+    background:rgb(192, 192, 192) !important;
+    border-color:  rgb(192, 192, 192) !important;
+    color: #fff;
+}
+
+#register {
+    height: 100vh;
+    min-height: 500px;
+}
+
+.form-wrap {
+    background: chartreuse;
+    
+    background: darkgrey;
+    display: flex;   
+    padding: 15px;
+}
+
+.form{
+    background: rgb(255, 255, 255);
+    
+    width: 100vw;
+    max-width: 350px;
+    padding: 30px 35px;
+
+    margin: auto;
+}
+
+
+.form-link-cont {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.form-link {
+    text-align: center;
+}
+
+.message-cont {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+}
+
+.message-space {
+    transition: all 250ms 50ms;
+    
+    font-weight: bold;
+    padding: .35em 1.25em;
+    color: #fff;
+}
+
+.message-space[status="sending"] {
+    background: hsl(0, 0%, 55%);
+}
+
+
+
+
+
+
+
+
+
+.title-wrap{
+    width: 100%;
+    text-align: center;
+}
+
+.title-wrap > h1 {
+    font-size: 1.25em;
+}
+
+.inputs-list{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 15px 0;
+
+    border: 0px solid red;
+
+}
+
+.input-container[data-error]::after {
+    content: attr(data-error);
+    display: inline-block;
+    font-size: .7em;
+    text-align: center;
+    color: darkred;
+
+    opacity: 0;
+
+    transition-duration: 300ms;
+}
+
+.input-container.wrong::after {
+    opacity: 1;
+}
+
+.input {
+    height: 25px;
+    margin: 3px 0;
+    padding: 13px 5px;
+
+    border: 0;
+
+    border-bottom: 1px solid #555;
+    font-size: .95em;
+    transition-duration: 250ms;
+}
+
+.input:required {
+    box-shadow: none;
+}
+
+.input[required]::after {
+    content: '*';
+    color: darkred;
+    display: inline-block;
+}
+
+.input:not(:placeholder-shown) {
+   border-color: darkred;
+}
+
+.input:valid {
+    border-color: rgb(41, 163, 41);
+}
+
+
+
+.input:focus{
+    outline: 0;
+    width: 100%;
+    border-color: rgb(0, 85, 196) !important;
+}
+
+
+.input:disabled, .input[disabled], .input[disabled]:hover {
+    background-color: #fff !important;
+    border-color: #ccc;
+}
+
+.input-label{
+    font-size: .94em;
+}
+
+.btn-wrap{
+    width: 100%;
+    text-align: center;
+}
+

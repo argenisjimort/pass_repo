@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalabel=no">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>User Register</title>
+</head>
+<body>
+
+    <section id="register" class="form-wrap">
+        <form action="/php/insertUser.php" method="post" id="register-form" class="form">
+
+                <h1>User Register</h1>
+            </div>
+
+            <div class="inputs-list">
+                
+                <div class="input-container" data-error="this place cant be empty">
+                    <label class="input-label" for="firstName">First Name</label>
+                    <input id="firstName" 
+                    name="firstName" 
+                    placeholder="Name" 
+                    type="text" 
+                    class="input info-input"
+                    title="cant be empty, cant use blankspaces" 
+                    required pattern="\S+">
+                </div>
+
+                <div class="input-container" data-error="this place cant be empty">
+                    <label class="input-label" for="lastName">Last Name</label>
+                    <input id="lastName" 
+                        title="cant be empty, cant use blankspaces" 
+                        name="lastName"
+                        type="text" 
+                        class="input info-input" 
+                        placeholder="Last Name" 
+                        required pattern="\S+">
+                </div>
+
+                <div class="input-container" data-error="not valid email">
+                    <label class="input-label" for="lastName">Email</label>
+                    <input id="lastName" 
+                        title="enter a valid email" 
+                        name="email" 
+                        type="email" 
+                        class="input email-input" 
+                        placeholder="Last Name" 
+                        required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                </div>
+                
+                <div class="input-container" data-error="not valid password">
+                    <label class="input-label" for="password">Password</label>
+                    <input id="password" 
+                        title="tiene que tener almenos 6 caracteres" 
+                        name="password" 
+                        type="password" 
+                        class="input password-input" 
+                        placeholder="Password" 
+                        required pattern="[\S+]{5,30}">
+                </div>
+
+                <div class="input-container" data-error="claves no son iguales">
+                    <label class="input-label" for="passwordConfirmation">Confirm Password</label>
+                    <input id="passwordConfirmation"
+                        title="tiene que tener almenos 6 caracteres, (sin espacion es blanco). y tiene que concordar con la clave" 
+                        name="passwordConfirmation" 
+                        type="password" 
+                        class="input  passwordConfirm-input" 
+                        placeholder="Confirm Password" 
+                        required pattern="[\S+]{5,30}">
+                </div>
+            </div>
+            
+            <div class="btn-wrap">
+                <input id="send-btn" type="submit" class="btn" value="Send" onclick="send();">
+            </div>
+
+        </form>
+        
+    </section>
+    <script src="main.js"></script>
+
+
+</body>
+</html>
